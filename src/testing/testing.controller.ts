@@ -19,8 +19,8 @@ export class TestingController {
   @Post("/realtime")
   initRealTime() {
     return {
-      "filename": "video1.mp4",
-      "filepath": "src/files/video1.mp4",
+      "filename": "moonVideo.mp4",
+      "filepath": "sample1.mp4",
       "date": 1624436412,
       "fps": 60,
       "resolution": "1920x1080",
@@ -49,14 +49,14 @@ export class TestingController {
 
   @Get("realtime_storage/:id")
   getRecordingInfo(@Param('id') uuid: string) {
-    let myuuid = uuidv4();
+    // let myuuid = uuidv4();
     return {
-      "filename": "video1.mp4",
-      "filepath": "src/files/video1.mp4",
+      "filename": "moonVideo.mp4",
+      "filepath": "sample1.mp4",
       "date": 1624436412,
       "fps": 60,
       "resolution": "1920x1080",
-      "uuid": `${myuuid}`,
+      "uuid": `1158de31-c840-48b9-8bfb-941a1b65cccb`,
       "frames": 0,
       "thumb_path": "hand_ring2.png",
       "ring_id": "N4246000_sol_des"
@@ -68,8 +68,8 @@ export class TestingController {
     return {
       "videos": [
         {
-          "filename": "video1.mp4",
-          "filepath": "src/files/video1.mp4",
+          "filename": "moonVideo.mp4",
+          "filepath": "sample1.mp4",
           "date": 1624436412,
           "fps": 60,
           "resolution": "1920x1080",
