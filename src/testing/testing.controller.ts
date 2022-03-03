@@ -1,7 +1,6 @@
 import { Controller, Delete, Get, Param, Post, StreamableFile } from '@nestjs/common';
 import { createReadStream } from 'fs';
 import { join } from 'path';
-import {v4 as uuidv4} from 'uuid'
 
 @Controller()
 export class TestingController {
