@@ -25,7 +25,7 @@ export class TestingController {
       "resolution": "1920x1080",
       "uuid": "1158de31-c840-48b9-8bfb-941a1b65cccb",
       "frames": 0,
-      "thumb_path": "hand_ring2.png",
+      "thumb_path": "demoRing1.png",
       "ring_id": "N4246000_sol_des"
     }
   }
@@ -57,7 +57,7 @@ export class TestingController {
       "resolution": "1920x1080",
       "uuid": `1158de31-c840-48b9-8bfb-941a1b65cccb`,
       "frames": 0,
-      "thumb_path": "hand_ring2.png",
+      "thumb_path": "demoRing1.png",
       "ring_id": "N4246000_sol_des"
     }
   }
@@ -74,7 +74,7 @@ export class TestingController {
           "resolution": "1920x1080",
           "uuid": "1158de31-c840-48b9-8bfb-941a1b65cccb",
           "frames": 0,
-          "thumb_path": "hand_ring2.png",
+          "thumb_path": "demoRing1.png",
           "ring_id": "N4246000_sol_des"
         }
       ]
