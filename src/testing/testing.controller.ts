@@ -53,31 +53,34 @@ export class TestingController {
   // Init streaming
   @Post("/realtime")
   initRealTime(@Body() body) {
-
     // console.log(`Recording: ${JSON.stringify(body)}`)
+    // console.log(`${body.ring_id}`)
 
-    return {
-      "filename":"",
-      "filepath":"",
-      "date":0,
-      "fps":60,
-      "resolution":"",
-      "uuid":"d8102b97-40d5-4354-8517-2e954e681467",
-      "frames":0,
-      "thumb_path":"",
-      "rings":[]
+    if (body.ring_id == "CRN4187352_love_solitaire_real_time") {
+      return {
+        "filename":"",
+        "filepath":"",
+        "date":0,
+        "fps":60,
+        "resolution":"",
+        "uuid":"d8102b97-40d5-4354-8517-2e954e681467",
+        "frames":0,
+        "thumb_path":"",
+        "rings":[]
+      }
+    } else {
+      return {
+        "filename":"",
+        "filepath":"",
+        "date":0,
+        "fps":60,
+        "resolution":"",
+        "uuid": "1158de31-c840-48b9-8bfb-941a1b65cccb",
+        "frames":0,
+        "thumb_path":"",
+        "rings":[]
+      }
     }
-    // {
-    //   "filename": "moonVideo.mp4",
-    //   "filepath": "sample1.mp4",
-    //   "date": 1624436412,
-    //   "fps": 60,
-    //   "resolution": "1920x1080",
-    //   "uuid": "1158de31-c840-48b9-8bfb-941a1b65cccb",
-    //   "frames": 0,
-    //   "thumb_path": "demoRing1.png",
-    //   "ring_id": "N4246000_sol_des"
-    // }
   }
 
   // Stop streaming
@@ -94,14 +97,14 @@ export class TestingController {
 
   @Get("realtime_storage/:id")
   getRecordingInfo(@Param('id') uuid: string) {
-    // let myuuid = uuidv4();
+    let myuuid = uuidv4();
     return {
       "filename": "moonVideo.mp4",
       "filepath": "sample1.mp4",
       "date": 1624436412,
       "fps": 60,
       "resolution": "1920x1080",
-      "uuid": "d8102b97-40d5-4354-8517-2e954e681467",
+      "uuid": myuuid,
       "frames": 0,
       "thumb_path": "demoRing1.png",
       "ring_id": "N4246000_sol_des"
