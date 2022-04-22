@@ -23,30 +23,23 @@ export class TestingController {
   // }
 
 
-  @Get("/home/lookingglass/data/ios_app/rings_info.json")
+  @Get("api/bts/getRings")
   getRings() {
-    return {
-      "rings": [
-        {
-          "ring_id": "CRN4187352_love_solitaire",
-          "name": "LOVE SOLITAIRE",
-          "reference_number": "CRN4187352",
-          "description": "LOVE solitaire, rose gold 750/1000, set with a brilliant-cut diamond available from 0.23 to 0.49 carats.",
-          "ring_image": "data/ios_app/ALG_Ring_Love-Solitaire.png",
-          "category": "Fine Jewelry",
-          "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html"
-        },
-        {
-          "ring_id": "CRN4773752_c_decartier_solitaire",
-          "name": "C DE CARTIER SOLITAIRE",
-          "reference_number": "CRN4773752",
-          "description": "LOVE solitaire, rose gold 750/1000, set with a brilliant-cut diamond available from 0.23 to 0.49 carats.",
-          "ring_image": "data/ios_app/ALG_Ring_C-de-Cartier-Solitaire.png",
-          "category": "TK",
-          "catalog_url": "NA"
-        }
-      ]
-    }
+    return [
+      {
+        "is_deleted": false,
+        "ring_id": "N4246000_sol_des16",
+        "name": "LOVE SOLITAIRE SPECIAL REAL TIME",
+        "reference_number": "CRN4187352",
+        "description": "LOVE solitaire, rose gold 750/1000, set with a brilliant-cut diamond ",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/demoRing.png",
+        "ring_image_hd": "/data/images/demoRingHD.png",
+        "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "id": 13
+      }
+    ]
   }
   
 
