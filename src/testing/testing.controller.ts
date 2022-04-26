@@ -23,22 +23,79 @@ export class TestingController {
   // }
 
 
-  @Get("api/bts/getRings")
+  @Get("api/rings")
   getRings() {
     return [
       {
         "is_deleted": false,
-        "ring_id": "N4246000_sol_des16",
-        "name": "LOVE SOLITAIRE SPECIAL REAL TIME",
-        "reference_number": "CRN4187352",
-        "description": "LOVE solitaire, rose gold 750/1000, set with a brilliant-cut diamond ",
+        "ring_id": "anillo1",
+        "name": "Ring 1",
+        "reference_number": "CRN4187351",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 1.",
         "category": "Fine Jewelry",
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
-        "ring_image": "/data/images/demoRing.png",
-        "ring_image_hd": "/data/images/demoRingHD.png",
+        "ring_image": "/data/images/ring1/ring1-S.png",
+        "ring_image_hd": "/data/images/ring1/ring1-XL.png",
         "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-        "id": 13
-      }
+        "updated": 1650877083,
+        "id": 1
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo2",
+        "name": "Ring 1",
+        "reference_number": "CRN4187352",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 2.",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring2/ring2-S.png",
+        "ring_image_hd": "/data/images/ring2/ring2-XL.png",
+        "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "updated": 1650877040,
+        "id": 2
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo3",
+        "name": "Ring 1",
+        "reference_number": "CRN4187353",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 3.",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring3/ring3-S.png",
+        "ring_image_hd": "/data/images/ring3/ring3-L.png",
+        "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "updated": 1650877041,
+        "id": 3
+      },
+      // {
+      //   "is_deleted": false,
+      //   "ring_id": "anillo4",
+      //   "name": "Ring 4",
+      //   "reference_number": "CRN4187354",
+      //   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 2.",
+      //   "category": "Fine Jewelry",
+      //   "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+      //   "ring_image": "/data/images/ring2/ring2-S.png",
+      //   "ring_image_hd": "/data/images/ring2/ring2-XL.png",
+      //   "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+      //   "date": 1650877044,
+      //   "id": 4
+      // },
+      // {
+      //   "is_deleted": false,
+      //   "ring_id": "anillo5",
+      //   "name": "Ring 5",
+      //   "reference_number": "CRN4187355",
+      //   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 2.",
+      //   "category": "Fine Jewelry",
+      //   "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+      //   "ring_image": "/data/images/ring1/ring1-S.png",
+      //   "ring_image_hd": "/data/images/ring1/ring1-XL.png",
+      //   "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+      //   "date": 1650877045,
+      //   "id": 5
+      // },
     ]
   }
   
@@ -46,8 +103,6 @@ export class TestingController {
   // Init streaming
   @Post("/realtime")
   initRealTime(@Body() body) {
-    // console.log(`Recording: ${JSON.stringify(body)}`)
-    // console.log(`${body.ring_id}`)
 
     if (body.ring_id == "CRN4187352_love_solitaire_real_time") {
       return {
