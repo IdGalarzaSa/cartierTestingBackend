@@ -104,7 +104,7 @@ export class TestingController {
   @Post("/realtime")
   initRealTime(@Body() body) {
 
-    console.log(body)
+    // console.log(body)
 
     return {
       "filename": "moonVideo.mp4",
