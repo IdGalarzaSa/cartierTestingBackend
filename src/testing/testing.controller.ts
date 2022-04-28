@@ -65,7 +65,7 @@ export class TestingController {
         "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-        "updated": 1650877053,
+        "updated": 1650877054,
         "id": 13
       },
       // {
