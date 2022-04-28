@@ -65,6 +65,7 @@ export class TestingController {
         "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "overlay_svg": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
         "updated": 1650877054,
         "id": 13
       },
@@ -99,12 +100,29 @@ export class TestingController {
     ]
   }
   
+  @Post("/streaming-restart")
+  startStreamingv2() {
+    console.log("start streaming")
+    return {
+      "sent": true
+    }
+  }
+
+  @Post("/streaming-stop")
+  stopStreaming() {
+    console.log("Stop streaming")
+    return {
+      "sent": true
+    }
+  }
+
+
 
   // Init streaming
   @Post("/realtime")
   initRealTime(@Body() body) {
 
-    // console.log(body)
+    console.log("Start realtime")
 
     return {
       "filename": "moonVideo.mp4",
@@ -148,6 +166,9 @@ export class TestingController {
   // Stop streaming
   @Delete("/realtime")
   deleteRealTime() {
+
+    console.log("Stop realtime")
+
     return "ok"
   }
 
