@@ -29,30 +29,30 @@ export class TestingController {
       {
         "is_deleted": false,
         "ring_id": "anillo1",
-        "name": "Ring 1",
-        "reference_number": "CRN4187351",
-        "description": "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 1.",
+        "name": "essaouira ring",
+        "reference_number": "CRN41873511",
+        "description": "white gold 750/1000, fluted emerald and chalcedony beads, calibrated and princess-cut sapphires, onyx, turquoise. all set with 56 brilliant-cut diamonds totaling 1.22 carats",
         "category": "Fine Jewelry",
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
-        "ring_image": "/data/images/ring1/ring1-S.png",
-        "ring_image_hd": "/data/images/ring1/ring1-XL.png",
+        "ring_image": "/data/images/ring1/DMA_essaouira_S.png",
+        "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
         "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-        "updated": 1650877041,
-        "id": 1
+        "updated": 1650877051,
+        "id": 11
       },
       {
         "is_deleted": false,
         "ring_id": "anillo2",
-        "name": "Ring 2",
-        "reference_number": "CRN4187352",
-        "description": "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 2.",
+        "name": "emerald ring",
+        "reference_number": "CRN4187312",
+        "description": "white gold 750/1000, emeralds, onyx, 180 diamonds totaling 2.39 carats",
         "category": "Fine Jewelry",
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
-        "ring_image": "/data/images/ring2/ring2-S.png",
-        "ring_image_hd": "/data/images/ring2/ring2-XL.png",
+        "ring_image": "/data/images/ring2/DMA_emerald_S.png",
+        "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
         "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-        "updated": 1650877042,
-        "id": 2
+        "updated": 1650877052,
+        "id": 12
       },
       {
         "is_deleted": false,
@@ -62,11 +62,11 @@ export class TestingController {
         "description": "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 3.",
         "category": "Fine Jewelry",
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
-        "ring_image": "/data/images/ring3/ring3-S.png",
-        "ring_image_hd": "/data/images/ring3/ring3-L.png",
+        "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
+        "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-        "updated": 1650877043,
-        "id": 3
+        "updated": 1650877053,
+        "id": 13
       },
       // {
       //   "is_deleted": false,
