@@ -22,7 +22,6 @@ export class TestingController {
   //   return new StreamableFile(file)
   // }
 
-
   @Get("api/rings")
   getRings() {
     return [
@@ -36,7 +35,8 @@ export class TestingController {
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
         "ring_image": "/data/images/ring1/DMA_essaouira_S.png",
         "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
-        "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "overlay_image_url": "/data/images/ring1/takeAway11.png",
+        "cover_image_url": "/data/images/ring1/cover1.png",
         "updated": 1650877051,
         "id": 11
       },
@@ -50,7 +50,8 @@ export class TestingController {
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
         "ring_image": "/data/images/ring2/DMA_emerald_S.png",
         "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
-        "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "overlay_image_url": "/data/images/ring2/takeAway21.png",
+        "cover_image_url": "/data/images/ring2/cover2.png",
         "updated": 1650877052,
         "id": 12
       },
@@ -64,8 +65,8 @@ export class TestingController {
         "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
         "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
-        "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-        "overlay_svg": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
+        "overlay_image_url": "/data/images/ring3/takeAway31.png",
+        "cover_image_url": "/data/images/ring3/cover3.png",
         "updated": 1650877054,
         "id": 13
       },
