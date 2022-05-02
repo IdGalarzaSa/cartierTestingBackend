@@ -102,7 +102,7 @@ export class TestingController {
     ]
   }
   
-  @Post("/streaming-restart")
+  @Post("api/streaming-restart")
   startStreamingv2() {
     // console.log("start streaming")
     return {
@@ -110,7 +110,7 @@ export class TestingController {
     }
   }
 
-  @Post("/streaming-stop")
+  @Post("api/streaming-stop")
   stopStreaming() {
     // console.log("Stop streaming")
     return {
