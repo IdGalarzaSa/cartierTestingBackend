@@ -24,6 +24,7 @@ export class TestingController {
 
   @Get("api/rings")
   getRings() {
+    // console.log("get rings")
     return [
       {
         "is_deleted": false,
@@ -103,7 +104,7 @@ export class TestingController {
   
   @Post("/streaming-restart")
   startStreamingv2() {
-    console.log("start streaming")
+    // console.log("start streaming")
     return {
       "sent": true
     }
@@ -111,7 +112,7 @@ export class TestingController {
 
   @Post("/streaming-stop")
   stopStreaming() {
-    console.log("Stop streaming")
+    // console.log("Stop streaming")
     return {
       "sent": true
     }
@@ -123,7 +124,7 @@ export class TestingController {
   @Post("/realtime")
   initRealTime(@Body() body) {
 
-    console.log("Start realtime")
+    // console.log("Start realtime")
 
     return {
       "filename": "moonVideo.mp4",
@@ -168,7 +169,7 @@ export class TestingController {
   @Delete("/realtime")
   deleteRealTime() {
 
-    console.log("Stop realtime")
+    // console.log("Stop realtime")
 
     return "ok"
   }
