@@ -1,4 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Post, StreamableFile } from '@nestjs/common';
+import { Console } from 'console';
 import { createReadStream } from 'fs';
 import { join } from 'path';
 import {v4 as uuidv4} from 'uuid'
@@ -100,6 +101,22 @@ export class TestingController {
       //   "id": 5
       // },
     ]
+  }
+    
+  @Post("api/generate-takeaway-images")
+  generateTakeAway(@Body() body) {
+    // console.log("start streaming")
+
+    console.log(body)
+
+    return {
+      "sent": true,
+      "takeaway_paths": [
+        "/data/takeaways/takeaway_00000120.jpg",
+        "/data/takeaways/takeaway_00000240.jpg",
+        "/data/takeaways/takeaway_00000360.jpg",
+      ]
+    }
   }
   
   @Post("api/streaming-restart")
