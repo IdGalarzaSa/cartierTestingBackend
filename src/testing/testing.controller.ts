@@ -112,9 +112,9 @@ export class TestingController {
     return {
       "sent": true,
       "takeaway_paths": [
-        "/data/takeaways/takeaway_00000120.jpg",
-        "/data/takeaways/takeaway_00000240.jpg",
-        "/data/takeaways/takeaway_00000360.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001320.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001440.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001560.jpg",
       ]
     }
   }
