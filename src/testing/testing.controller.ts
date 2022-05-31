@@ -112,9 +112,9 @@ export class TestingController {
     return {
       "sent": true,
       "takeaway_paths": [
-        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001320.jpg",
-        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001440.jpg",
-        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001560.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001321.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001441.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001561.jpg",
       ]
     }
   }
@@ -142,17 +142,51 @@ export class TestingController {
   initRealTime(@Body() body) {
 
     // console.log("Start realtime")
+    switch (body.ring_id) {
+      case "anillo1":
+        
+        return {
+          "filename": "moonVideo.mp4",
+          "filepath": "sample1.mp4",
+          "date": 1624436412,
+          "fps": 60,
+          "resolution": "1920x1080",
+          "uuid": "d8102b97-40d5-4354-8517-2e954e681467",
+          "frames": 0,
+          "thumb_path": "demoRing1.png",
+          "ring_id": "anillo1"
+        };
 
-    return {
-      "filename": "moonVideo.mp4",
-      "filepath": "sample1.mp4",
-      "date": 1624436412,
-      "fps": 60,
-      "resolution": "1920x1080",
-      "uuid": "d8102b97-40d5-4354-8517-2e954e681467",
-      "frames": 0,
-      "thumb_path": "demoRing1.png",
-      "ring_id": "N4246000_sol_des"
+      case "anillo2":
+        
+        return {
+          "filename": "moonVideo.mp4",
+          "filepath": "sample1.mp4",
+          "date": 1624436412,
+          "fps": 60,
+          "resolution": "1920x1080",
+          "uuid": "d8102b97-40d5-4354-8517-2e954e681467",
+          "frames": 0,
+          "thumb_path": "demoRing1.png",
+          "ring_id": "anillo2"
+        }
+
+      case "anillo3":
+        
+        return {
+          "filename": "moonVideo.mp4",
+          "filepath": "sample1.mp4",
+          "date": 1624436412,
+          "fps": 60,
+          "resolution": "1920x1080",
+          "uuid": "d8102b97-40d5-4354-8517-2e954e681467",
+          "frames": 0,
+          "thumb_path": "demoRing1.png",
+          "ring_id": "anillo3"
+        }
+    
+      default:
+        break;
     }
 
     // if (body.ring_id == "CRN4187352_love_solitaire_real_time") {
