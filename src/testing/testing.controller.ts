@@ -1,11 +1,14 @@
 import { Body, Controller, Delete, Get, Param, Post, StreamableFile } from '@nestjs/common';
-import { Console } from 'console';
 import { createReadStream } from 'fs';
 import { join } from 'path';
 import {v4 as uuidv4} from 'uuid'
+import { TestingService } from './testing.service';
 
 @Controller()
 export class TestingController {
+  constructor(
+    private testingService: TestingService
+  ){}
 
   @Get("/video/:filepath")
   videoDownload(@Param('filepath') filepath: string) {
@@ -24,8 +27,49 @@ export class TestingController {
   // }
 
   @Get("api/rings")
-  getRings() {
-    // console.log("get rings")
+  async getRings(): Promise<Object[]> {
+    return this.testingService.getRings()
+  }
+    
+  @Post("api/generate-takeaway-images")
+  generateTakeAway(@Body() body) {
+    return {
+      "sent": true,
+      "takeaway_paths": [
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001321.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001441.jpg",
+        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001561.jpg",
+      ]
+    }
+  }
+  
+  @Post("api/streaming-restart")
+  startStreamingv2() {
+    return {
+      "sent": true
+    }
+  }
+
+  @Post("api/streaming-stop")
+  stopStreaming() {
+    return {
+      "sent": true
+    }
+  }
+
+
+  @Post("api/generate-takeaway-video")
+  generateTakeawayVideo(@Body() body) {
+    return {
+      "sent": true,
+      "takeaway_paths": [
+        "/data/takeaways/ALG-ML Stream_Sample_8s_1.mp4"
+      ]
+    }
+  }
+
+  @Get("api/getAllRings")
+  getAllRings() {
     return [
       {
         "is_deleted": false,
@@ -72,76 +116,149 @@ export class TestingController {
         "updated": 1650877054,
         "id": 13
       },
-      // {
-      //   "is_deleted": false,
-      //   "ring_id": "anillo4",
-      //   "name": "Ring 4",
-      //   "reference_number": "CRN4187354",
-      //   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 2.",
-      //   "category": "Fine Jewelry",
-      //   "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
-      //   "ring_image": "/data/images/ring2/ring2-S.png",
-      //   "ring_image_hd": "/data/images/ring2/ring2-XL.png",
-      //   "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-      //   "date": 1650877044,
-      //   "id": 4
-      // },
-      // {
-      //   "is_deleted": false,
-      //   "ring_id": "anillo5",
-      //   "name": "Ring 5",
-      //   "reference_number": "CRN4187355",
-      //   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum - 2.",
-      //   "category": "Fine Jewelry",
-      //   "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
-      //   "ring_image": "/data/images/ring1/ring1-S.png",
-      //   "ring_image_hd": "/data/images/ring1/ring1-XL.png",
-      //   "overlay_image_url": "/data1/rings/N4246000_sol_des16/3a772893-a66c-4857-aa3e-eecc27440655",
-      //   "date": 1650877045,
-      //   "id": 5
-      // },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo4",
+        "name": "essaouira ring",
+        "reference_number": "CRN41873511",
+        "description": "white gold 750/1000, fluted emerald and chalcedony beads, calibrated and princess-cut sapphires, onyx, turquoise. all set with 56 brilliant-cut diamonds totaling 1.22 carats",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring1/DMA_essaouira_S.png",
+        "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
+        "overlay_image_url": "/data/images/ring1/takeAway11.png",
+        "cover_image_url": "/data/images/ring1/cover1.png",
+        "updated": 1650877051,
+        "id": 14
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo5",
+        "name": "emerald ring",
+        "reference_number": "CRN4187312",
+        "description": "PLATINUM, ONE 9.01 CARAT EMERALD-CUT EMERALD FROM COLOMBIA, TWO TAPERED BAGUETTE DIAMONDS TOTALING 0.64 CARATS D-E/VVS1",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring2/DMA_emerald_S.png",
+        "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
+        "overlay_image_url": "/data/images/ring2/takeAway21.png",
+        "cover_image_url": "/data/images/ring2/cover2.png",
+        "updated": 1650877052,
+        "id": 15
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo6",
+        "name": "SANYOGITA RING",
+        "reference_number": "CRN4187353",
+        "description": "PLATINUM, ONE 10.00-CARAT RUBY FROM MOZAMBIQUE, CARVED RUBIES, SAPPHIRES AND EMERALDS, ONYX, BRILLIANT-CUT DIAMONDS",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
+        "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
+        "overlay_image_url": "/data/images/ring3/takeAway31.png",
+        "cover_image_url": "/data/images/ring3/cover3.png",
+        "updated": 1650877054,
+        "id": 16
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo7",
+        "name": "essaouira ring",
+        "reference_number": "CRN41873511",
+        "description": "white gold 750/1000, fluted emerald and chalcedony beads, calibrated and princess-cut sapphires, onyx, turquoise. all set with 56 brilliant-cut diamonds totaling 1.22 carats",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring1/DMA_essaouira_S.png",
+        "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
+        "overlay_image_url": "/data/images/ring1/takeAway11.png",
+        "cover_image_url": "/data/images/ring1/cover1.png",
+        "updated": 1650877051,
+        "id": 17
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo8",
+        "name": "emerald ring",
+        "reference_number": "CRN4187312",
+        "description": "PLATINUM, ONE 9.01 CARAT EMERALD-CUT EMERALD FROM COLOMBIA, TWO TAPERED BAGUETTE DIAMONDS TOTALING 0.64 CARATS D-E/VVS1",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring2/DMA_emerald_S.png",
+        "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
+        "overlay_image_url": "/data/images/ring2/takeAway21.png",
+        "cover_image_url": "/data/images/ring2/cover2.png",
+        "updated": 1650877052,
+        "id": 18
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo9",
+        "name": "SANYOGITA RING",
+        "reference_number": "CRN4187353",
+        "description": "PLATINUM, ONE 10.00-CARAT RUBY FROM MOZAMBIQUE, CARVED RUBIES, SAPPHIRES AND EMERALDS, ONYX, BRILLIANT-CUT DIAMONDS",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
+        "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
+        "overlay_image_url": "/data/images/ring3/takeAway31.png",
+        "cover_image_url": "/data/images/ring3/cover3.png",
+        "updated": 1650877054,
+        "id": 19
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo10",
+        "name": "essaouira ring",
+        "reference_number": "CRN41873511",
+        "description": "white gold 750/1000, fluted emerald and chalcedony beads, calibrated and princess-cut sapphires, onyx, turquoise. all set with 56 brilliant-cut diamonds totaling 1.22 carats",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring1/DMA_essaouira_S.png",
+        "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
+        "overlay_image_url": "/data/images/ring1/takeAway11.png",
+        "cover_image_url": "/data/images/ring1/cover1.png",
+        "updated": 1650877051,
+        "id": 20
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo11",
+        "name": "emerald ring",
+        "reference_number": "CRN4187312",
+        "description": "PLATINUM, ONE 9.01 CARAT EMERALD-CUT EMERALD FROM COLOMBIA, TWO TAPERED BAGUETTE DIAMONDS TOTALING 0.64 CARATS D-E/VVS1",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring2/DMA_emerald_S.png",
+        "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
+        "overlay_image_url": "/data/images/ring2/takeAway21.png",
+        "cover_image_url": "/data/images/ring2/cover2.png",
+        "updated": 1650877052,
+        "id": 21
+      },
+      {
+        "is_deleted": false,
+        "ring_id": "anillo12",
+        "name": "SANYOGITA RING",
+        "reference_number": "CRN4187353",
+        "description": "PLATINUM, ONE 10.00-CARAT RUBY FROM MOZAMBIQUE, CARVED RUBIES, SAPPHIRES AND EMERALDS, ONYX, BRILLIANT-CUT DIAMONDS",
+        "category": "Fine Jewelry",
+        "catalog_url": "https://www.cartier.com/en-us/jewelry/engagement-rings/love-solitaire-CRN4250100.html",
+        "ring_image": "/data/images/ring3/DMA_sanyogita_S.png",
+        "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
+        "overlay_image_url": "/data/images/ring3/takeAway31.png",
+        "cover_image_url": "/data/images/ring3/cover3.png",
+        "updated": 1650877054,
+        "id": 22
+      }
     ]
-  }
     
-  @Post("api/generate-takeaway-images")
-  generateTakeAway(@Body() body) {
-    // console.log("start streaming")
-
-    console.log(body)
-
-    return {
-      "sent": true,
-      "takeaway_paths": [
-        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001321.jpg",
-        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001441.jpg",
-        "/data/takeaways/d38467fb-15ca-4ba3-b8b5-d17ad08b6800_00001561.jpg",
-      ]
-    }
   }
-  
-  @Post("api/streaming-restart")
-  startStreamingv2() {
-    // console.log("start streaming")
-    return {
-      "sent": true
-    }
-  }
-
-  @Post("api/streaming-stop")
-  stopStreaming() {
-    // console.log("Stop streaming")
-    return {
-      "sent": true
-    }
-  }
-
 
 
   // Init streaming
   @Post("/realtime")
   initRealTime(@Body() body) {
-
-    // console.log("Start realtime")
     switch (body.ring_id) {
       case "anillo1":
         
@@ -219,9 +336,6 @@ export class TestingController {
   // Stop streaming
   @Delete("/realtime")
   deleteRealTime() {
-
-    // console.log("Stop realtime")
-
     return "ok"
   }
 
