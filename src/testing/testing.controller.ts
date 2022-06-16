@@ -46,14 +46,20 @@ export class TestingController {
   @Post("api/streaming-restart")
   startStreamingv2() {
     return {
-      "sent": true
+      "error": false,
+      "streaming": true,
+      "msg": "Error on Stop streaming",
+      "streaming_pid": 9087574
     }
   }
 
   @Post("api/streaming-stop")
   stopStreaming() {
     return {
-      "sent": true
+      "error": false,
+      "streaming": true,
+      "msg": "Error on Stop streaming",
+      "streaming_pid": 9087574
     }
   }
 
