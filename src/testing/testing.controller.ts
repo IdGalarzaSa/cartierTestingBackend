@@ -89,6 +89,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
         "overlay_image_url": "/data/images/ring1/takeAway11.png",
         "cover_image_url": "/data/images/ring1/cover1.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877051,
         "id": 11
       },
@@ -104,6 +105,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
         "overlay_image_url": "/data/images/ring2/takeAway21.png",
         "cover_image_url": "/data/images/ring2/cover2.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877052,
         "id": 12
       },
@@ -119,6 +121,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data/images/ring3/takeAway31.png",
         "cover_image_url": "/data/images/ring3/cover3.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877054,
         "id": 13
       },
@@ -134,6 +137,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
         "overlay_image_url": "/data/images/ring1/takeAway11.png",
         "cover_image_url": "/data/images/ring1/cover1.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877051,
         "id": 14
       },
@@ -149,6 +153,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
         "overlay_image_url": "/data/images/ring2/takeAway21.png",
         "cover_image_url": "/data/images/ring2/cover2.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877052,
         "id": 15
       },
@@ -164,6 +169,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data/images/ring3/takeAway31.png",
         "cover_image_url": "/data/images/ring3/cover3.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877054,
         "id": 16
       },
@@ -179,6 +185,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
         "overlay_image_url": "/data/images/ring1/takeAway11.png",
         "cover_image_url": "/data/images/ring1/cover1.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877051,
         "id": 17
       },
@@ -194,6 +201,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
         "overlay_image_url": "/data/images/ring2/takeAway21.png",
         "cover_image_url": "/data/images/ring2/cover2.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877052,
         "id": 18
       },
@@ -209,6 +217,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data/images/ring3/takeAway31.png",
         "cover_image_url": "/data/images/ring3/cover3.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877054,
         "id": 19
       },
@@ -224,6 +233,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
         "overlay_image_url": "/data/images/ring1/takeAway11.png",
         "cover_image_url": "/data/images/ring1/cover1.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877051,
         "id": 20
       },
@@ -239,6 +249,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
         "overlay_image_url": "/data/images/ring2/takeAway21.png",
         "cover_image_url": "/data/images/ring2/cover2.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877052,
         "id": 21
       },
@@ -254,6 +265,7 @@ export class TestingController {
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data/images/ring3/takeAway31.png",
         "cover_image_url": "/data/images/ring3/cover3.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877054,
         "id": 22
       }
@@ -267,7 +279,6 @@ export class TestingController {
   initRealTime(@Body() body) {
     switch (body.ring_id) {
       case "anillo1":
-        
         return {
           "filename": "moonVideo.mp4",
           "filepath": "sample1.mp4",
@@ -309,7 +320,17 @@ export class TestingController {
         }
     
       default:
-        break;
+        return {
+          "filename": "moonVideo.mp4",
+          "filepath": "sample1.mp4",
+          "date": 1624436412,
+          "fps": 60,
+          "resolution": "1920x1080",
+          "uuid": "d8102b97-40d5-4354-8517-2e954e681467",
+          "frames": 0,
+          "thumb_path": "demoRing1.png",
+          "ring_id": "anillo3"
+        }
     }
 
     // if (body.ring_id == "CRN4187352_love_solitaire_real_time") {

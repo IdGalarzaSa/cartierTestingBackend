@@ -26,6 +26,7 @@ export class TestingService {
         "ring_image_hd": "/data/images/ring1/DMA_essaouira_L.png",
         "overlay_image_url": "/data/images/ring1/takeAway11.png",
         "cover_image_url": "/data/images/ring1/cover1.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877051,
         "id": 11
       },
@@ -41,6 +42,7 @@ export class TestingService {
         "ring_image_hd": "/data/images/ring2/DMA_emerald_L.png",
         "overlay_image_url": "/data/images/ring2/takeAway21.png",
         "cover_image_url": "/data/images/ring2/cover2.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877052,
         "id": 12
       },
@@ -56,6 +58,7 @@ export class TestingService {
         "ring_image_hd": "/data/images/ring3/DMA_sanyogita_L.png",
         "overlay_image_url": "/data/images/ring3/takeAway31.png",
         "cover_image_url": "/data/images/ring3/cover3.png",
+        "file_asset_url": "/data/docs/ALG_WWM_PDFsample.pdf",
         "updated": 1650877054,
         "id": 13
       },
