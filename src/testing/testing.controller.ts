@@ -281,7 +281,7 @@ export class TestingController {
       case "anillo1":
         return {
           "filename": "moonVideo.mp4",
-          "filepath": "sample1.mp4",
+          "filepath": "moonVideo.mp4",
           "date": 1624436412,
           "fps": 60,
           "resolution": "1920x1080",
@@ -295,7 +295,7 @@ export class TestingController {
         
         return {
           "filename": "moonVideo.mp4",
-          "filepath": "sample1.mp4",
+          "filepath": "moonVideo.mp4",
           "date": 1624436412,
           "fps": 60,
           "resolution": "1920x1080",
@@ -309,7 +309,7 @@ export class TestingController {
         
         return {
           "filename": "moonVideo.mp4",
-          "filepath": "sample1.mp4",
+          "filepath": "moonVideo.mp4",
           "date": 1624436412,
           "fps": 60,
           "resolution": "1920x1080",
@@ -322,7 +322,7 @@ export class TestingController {
       default:
         return {
           "filename": "moonVideo.mp4",
-          "filepath": "sample1.mp4",
+          "filepath": "moonVideo.mp4",
           "date": 1624436412,
           "fps": 60,
           "resolution": "1920x1080",
